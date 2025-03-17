@@ -1,3 +1,5 @@
+/!\ Temporary fork to work around https://github.com/rust-lang/flate2-rs/discussions/479 /!\
+
 # libz-sys
 
 A common library for linking `libz` to Rust programs (also known as zlib).
