@@ -1,19 +1,12 @@
 [package]
-name = "systest"
+name = "systest-zng"
 version = "0.1.0"
-authors = ["Alex Crichton <alex@alexcrichton.com>"]
+authors = ["Alex Crichton <alex@alexcrichton.com>", "Josh Triplett <josh@joshtriplett.org>"]
 edition = "2018"
 
 [dependencies]
-libz-sys = { path = "..", default-features = false, features = ["libc"] }
+libz-ng-sys = { path = ".." }
 libc = "0.2"
 
 [build-dependencies]
 ctest2 = "0.4.4"
-
-[features]
-libz-static = ["libz-sys/static"]
-zlib-ng = ["libz-sys/zlib-ng"]
-zlib-ng-no-cmake-experimental-community-maintained = [
-    "libz-sys/zlib-ng-no-cmake-experimental-community-maintained",
-]
