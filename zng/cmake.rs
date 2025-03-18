@@ -6,6 +6,7 @@ pub fn build_zlib_ng(target: &str, compat: bool) {
         .define("BUILD_SHARED_LIBS", "OFF")
         .define("ZLIB_COMPAT", if compat { "ON" } else { "OFF" })
         .define("ZLIB_ENABLE_TESTS", "OFF")
+        .define("CMAKE_VERBOSE_MAKEFILE", "ON")
         .define("WITH_GZFILEOP", "ON");
     if target.contains("s390x") {
         // Enable hardware compression on s390x.
